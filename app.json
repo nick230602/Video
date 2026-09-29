@@ -27,7 +27,7 @@
 			"static": false,
 			"matrixAutoUpdate": true,
 			"layers": 1,
-			"matrix": [0.9747941070689481,-3.469446951953613e-18,-0.22310636213172266,0,-0.05273984091492492,0.9716585533767911,-0.2304303904218997,0,0.21678320507806823,0.2363887807187996,0.9471670319148354,0,0.4278059236306209,0.9210744713069557,2.8814880927333495,1],
+			"matrix": [0.9989876708478431,0,-0.0449848140376371,0,-0.018901879914949352,0.9074391244443417,-0.4197582094055653,0,0.040820980263604964,0.4201835734862628,0.9065204973648594,0,-0.10750943098925436,1.4802182009986131,2.757832495177498,1],
 			"up": [0,1,0],
 			"fov": 50,
 			"zoom": 1,
@@ -441,7 +441,7 @@
 		"6e29591f-d07c-4ad9-96d5-a9712ba80b0c": [
 			{
 				"name": "",
-				"source": "const url = 'https://video-plum-zeta.vercel.app/assets/dog.mp4';\nconst name = 'dog';\nconst material = this.material;\nconst video = player.loadVideo(name, url, (video) => {\n    video.setLoop(true);\n    video.setVolume(1);\n    material.map = video.texture;\n    video.play();\n});"
+				"source": "const url = 'https://video-plum-zeta.vercel.app/assets/dog.mp4';\nconst name = 'dog';\nconst material = this.material;\nconst video = player.loadVideo(name, url, (video) => {\n    video.setLoop(true);\n    video.setVolume(1);\n    material.map = video.texture;\n    if (player.isEditor) { video.play(); }\n});"
 			}]
 	},
 	"backgroundType": "Default",
